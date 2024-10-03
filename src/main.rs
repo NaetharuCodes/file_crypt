@@ -1,6 +1,7 @@
 mod cli;
 mod encryption;
 mod file_ops;
+
 use clap::Parser;
 use cli::Cli;
 
@@ -9,7 +10,14 @@ fn main() {
 
     let cli = Cli::parse();
 
-    let key = b"mySecretKey";
+    let pw = cli.pw;
+
+    if pw.is_empty() {
+        eprintln!("Error, password is empty");
+        std::process::exit(1);
+    }
+
+    let key = pw.as_bytes();
 
     match cli.operation.to_lowercase().as_str() {
         "enc" => {
