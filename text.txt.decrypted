@@ -1,0 +1,7 @@
+This is the test document. It has a reasonably long bit of text in so that we can try out our encryption and decryption and check all is working as it ought.
+
+We should see this text change to random characters and then back to readable words once we run our code.
+
+Fingers crossed!
+
+Here we go.

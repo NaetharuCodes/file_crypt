@@ -12,4 +12,8 @@ pub struct Cli {
     // Choose if we want to encrypt or decrypt this file
     #[arg(short, long)]
     pub operation: String,
+
+    // Choose if we want to encrypt or decrypt this file
+    #[arg(short, long)]
+    pub pw: String,
 }
